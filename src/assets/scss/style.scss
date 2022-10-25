@@ -8,9 +8,19 @@
 @import 'base/typography';
 @import 'base/default';
 
+
+
+
 /* blocks */
 /* Пример подключения*/
 /* @import 'blocks/component/component'; */
+@import 'blocks/header/header';
+@import 'blocks/proposal/proposal';
+@import 'blocks/receipts/receipts';
+@import 'blocks/soon/soon';
+@import 'blocks/news/news';
+
+
 
 /* pages */
 /* @import 'index'; */

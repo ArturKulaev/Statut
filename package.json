@@ -23,7 +23,7 @@
     "babel-core": "^6.26.3",
     "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^5.0.0",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-cheerio": "^0.6.3",
     "gulp-clean-css": "^4.3.0",
@@ -31,14 +31,15 @@
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-header": "^2.0.9",
     "gulp-html-beautify": "^1.0.1",
-    "gulp-imagemin": "^5.0.3",
+    "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-sass": "3.0.0",
+    "gulp-sass": "^5.1.0",
     "gulp-svgmin": "^2.1.0",
     "gulp-twig": "^1.2.0",
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "sass": "^1.55.0"
   },
   "dependencies": {
     "directory-tree": "^2.2.5",

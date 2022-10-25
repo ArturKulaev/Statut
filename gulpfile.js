@@ -1,5 +1,5 @@
 const gulp		 = require('gulp'),
-	sass         = require('gulp-sass'),
+	// sass         = require('gulp-sass'),
 	browserSync  = require('browser-sync'),
 	concat       = require('gulp-concat'),
 	uglify       = require('gulp-uglify-es').default,
@@ -17,6 +17,7 @@ const gulp		 = require('gulp'),
 	gcmq         = require('gulp-group-css-media-queries'),
 	map          = require('map-stream'),
 	header       = require('gulp-header');
+	sass         = require('gulp-sass')(require('sass'));
 
 // таск для компиляции scss в css
 gulp.task('sass', () =>

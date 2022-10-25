@@ -1,3 +1,95 @@
 <header>
-	<div class="container"> </div>
+	<div class="header__top-container">
+		<div class="header__top-links">
+			<div class="header__logistics">
+				<div class="header__link-container">
+					{% include '/assets/svg/mesto.svg' %}
+					<a href="#" class="top-link">
+						Москва
+					</a>
+				</div>
+				<div class="header__link-container">
+					{% include '/assets/svg/box.svg' %}
+					<a href="#" class="top-link">
+						Доставка и оплата
+					</a>
+				</div>
+				<div class="header__link-container">
+					{% include '/assets/svg/adress.svg' %}
+					<a href="#" class="top-link">
+						Адрес и часы работы
+					</a>
+				</div>
+			</div>
+			<div class="header__contacts">
+				<div class="header__link-container header__contact-container">
+				{% include '/assets/svg/mail.svg' %}
+					<a href="mailto:market@estatut.ru" class="top-link">
+						market@estatut.ru
+					</a>
+				</div>
+				<div class="header__link-container header__contact-container">
+				{% include '/assets/svg/phone.svg' %}
+					<a href="tell:+79686606550" class="top-link">
+						8 (968) 660-65-50
+					</a>
+						{% include '/assets/svg/info.svg' %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header__middle-container">
+		<div class="header-logo">
+			<a href="#">
+				{% include '/assets/svg/logo.svg' %}
+			</a>
+		</div>
+		<div class="search">
+			<form class="header__form" action="">
+				<input type="text" class="header__field-form" placeholder="Автор, название, ISBN">
+				<button class="header__search-button-form">
+					{% include '/assets/svg/search.svg' %} Искать
+				</button>
+			</form>
+		</div>
+		<div class="middle__links-container">
+			<div class="link__container">
+				{% include '/assets/svg/mark.svg' %}
+				<a href="">Отложено</a>
+			</div>
+			<div class="link__container">
+				{% include '/assets/svg/smile.svg' %}
+				<a href="">Войти</a>
+			</div>
+			<div class="link__container">
+				{% include '/assets/svg/basket.svg' %}
+				<a href="">Корзина<span class="check">10</span></a>
+			</div>
+		</div>
+	</div>
+	<div class="header__footer-container">
+		<div class="header__footer-links">
+			<div class="header__footer-link-container">
+				{% include '/assets/svg/burger.svg' %}
+				<a href="#">Каталог</a>
+			</div>
+			<div class="header__footer-link-container">
+				<a href="#">Авторы</a>
+			</div>
+			<div class="header__footer-link-container">
+				<a href="#">Новинки</a>
+			</div>
+			<div class="active header__footer-link-container">
+				{% include '/assets/svg/tag.svg' %}
+				<a href="#">Скидки</a>
+			</div>
+			<div class="header__footer-link-container">
+				<a href="#">Партнерам</a>
+			</div>
+			<div class="header__footer-link-container">
+				<a href="#">Мы</a>
+			</div>
+
+		</div>
+	</div>
 </header>
