@@ -51,7 +51,7 @@ header
 
 .header__contact-container a
 {
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .header__link-container
@@ -74,13 +74,13 @@ header
 	}
 }
 
-.top-link
+.header__link-container-top
 {
 	margin-left: 8px;
 	margin-right: 31px
 }
 
-.header__contact-container:nth-child(2) .top-link
+.header__contact-container:nth-child(2), .header__link-container
 {
 	margin-right: 5px;
 }
@@ -98,19 +98,32 @@ header
 	font-size: 14px;
 	font-weight: 400;
 	width: 1138px;
+	flex-wrap: wrap;
+
+	@media screen and (max-width: 1043px) {
+			display: block;
+		}
+
+	@media screen and (max-width: 767px) {
+		padding: 0 20px;
+	}
+
+	@media screen and (max-width: 525px) {
+		display: none;
+	}
 }
 
-.header-logo
+.header__middle-logo
 {
 	margin-right: 30px;
 }
 
-.search
+.header__middle-search
 {
 	margin-right: auto;
 }
 
-.header__field-form
+.field-form
 {
 	margin: 0;
 	padding: 0;
@@ -123,12 +136,12 @@ header
 
 }
 
-.header__form 
+.search__form 
 {
 	display: flex;
 }
 
- .header__search-button-form
+ .search-button-form
 {
 	background: #ff7a00;
 	color: #fff;
@@ -142,13 +155,25 @@ header
 	border-radius: 0 5px 5px 0;
 }
 
-.middle__links-container
+.header__middle__container-links
 {
 	display: flex;
     align-items: center;
+
+	@media screen and (max-width: 1043px) {
+			margin-top: 15px;
+	}
+
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+
+	@media screen and (max-width: 525px) {
+		display: none;
+	}
 }
 
-.link__container
+.header__middle__container-link
 {
 	position: relative;
 	display: flex;
@@ -170,9 +195,11 @@ header
 
 		margin-left: 10px;
 	}
+
+
 }
 
-.link__container .check
+.header__middle__container-link .header__middle__basket
 {
 	top: -8px;
 	right: 58px;
@@ -188,7 +215,7 @@ header
 
 // HEADER__FOTER
 
-.header__footer-container
+.header__bottom-container
 {
 	display: flex;
 	// justify-content: space-between;
@@ -199,7 +226,7 @@ header
 
 }
 
-.header__footer-links
+.header__bottom-links
 {
 
 	display: flex;
@@ -208,7 +235,7 @@ header
 
 }
 
-.header__footer-link-container
+.header__bottom-link-container
 {
 	display: flex;
 	margin-right: 20px;
@@ -232,5 +259,13 @@ header
 .active a
 {
 	color:#FF283D;
+
+}
+// MOBILE
+
+.header__input-mobile
+{
+	display: block; 
+	max-width: 700
 
 }

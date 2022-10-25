@@ -4,33 +4,33 @@
 			<div class="header__logistics">
 				<div class="header__link-container">
 					{% include '/assets/svg/mesto.svg' %}
-					<a href="#" class="top-link">
+					<a href="#" class="header__link-container-top">
 						Москва
 					</a>
 				</div>
 				<div class="header__link-container">
 					{% include '/assets/svg/box.svg' %}
-					<a href="#" class="top-link">
+					<a href="#" class="header__link-container-top">
 						Доставка и оплата
 					</a>
 				</div>
 				<div class="header__link-container">
 					{% include '/assets/svg/adress.svg' %}
-					<a href="#" class="top-link">
+					<a href="#" class="header__link-container-top">
 						Адрес и часы работы
 					</a>
 				</div>
 			</div>
-			<div class="header__contacts">
-				<div class="header__link-container header__contact-container">
+			<div class="header__contacts contacts">
+				<div class="header__link-container header__contact-container contact-container">
 				{% include '/assets/svg/mail.svg' %}
-					<a href="mailto:market@estatut.ru" class="top-link">
+					<a href="mailto:market@estatut.ru" class="header__link-container-top link-container">
 						market@estatut.ru
 					</a>
 				</div>
-				<div class="header__link-container header__contact-container">
+				<div class="header__link-container header__contact-container contact-container">
 				{% include '/assets/svg/phone.svg' %}
-					<a href="tell:+79686606550" class="top-link">
+					<a href="tell:+79686606550" class="header__link-container-top link-container">
 						8 (968) 660-65-50
 					</a>
 						{% include '/assets/svg/info.svg' %}
@@ -39,54 +39,58 @@
 		</div>
 	</div>
 	<div class="header__middle-container">
-		<div class="header-logo">
+		<div class="header__middle-logo">
 			<a href="#">
 				{% include '/assets/svg/logo.svg' %}
 			</a>
 		</div>
-		<div class="search">
-			<form class="header__form" action="">
-				<input type="text" class="header__field-form" placeholder="Автор, название, ISBN">
-				<button class="header__search-button-form">
+		<div class="header__middle-search">
+			<form class="header__middle-form search__form" action="">
+				<input type="text" class="header__field-form field-form" placeholder="Автор, название, ISBN">
+				
+				<button class="header__search-button-form search-button-form">
 					{% include '/assets/svg/search.svg' %} Искать
 				</button>
 			</form>
 		</div>
-		<div class="middle__links-container">
-			<div class="link__container">
+		<div class="header__middle__container-links">
+			<div class="header__middle__container-link">
 				{% include '/assets/svg/mark.svg' %}
 				<a href="">Отложено</a>
 			</div>
-			<div class="link__container">
+			<div class="header__middle__container-link">
 				{% include '/assets/svg/smile.svg' %}
 				<a href="">Войти</a>
 			</div>
-			<div class="link__container">
+			<div class="header__middle__container-link">
 				{% include '/assets/svg/basket.svg' %}
-				<a href="">Корзина<span class="check">10</span></a>
+				<a href="">Корзина<span class="header__middle__basket">10</span></a>
 			</div>
 		</div>
 	</div>
-	<div class="header__footer-container">
-		<div class="header__footer-links">
-			<div class="header__footer-link-container">
+	<div class="header__middle-mobile">
+		<input type="text" class="header__field-form field-form header__input-mobile" placeholder="Что будем искать?">
+	</div>
+	<div class="header__bottom-container">
+		<div class="header__bottom-links">
+			<div class="header__bottom-link-container">
 				{% include '/assets/svg/burger.svg' %}
 				<a href="#">Каталог</a>
 			</div>
-			<div class="header__footer-link-container">
+			<div class="header__bottom-link-container">
 				<a href="#">Авторы</a>
 			</div>
-			<div class="header__footer-link-container">
+			<div class="header__bottom-link-container">
 				<a href="#">Новинки</a>
 			</div>
-			<div class="active header__footer-link-container">
+			<div class="active header__bottom-link-container">
 				{% include '/assets/svg/tag.svg' %}
 				<a href="#">Скидки</a>
 			</div>
-			<div class="header__footer-link-container">
+			<div class="header__bottom-link-container">
 				<a href="#">Партнерам</a>
 			</div>
-			<div class="header__footer-link-container">
+			<div class="header__bottom-link-container">
 				<a href="#">Мы</a>
 			</div>
 
