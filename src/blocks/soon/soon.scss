@@ -97,10 +97,20 @@ span
 	display: flex;
 	flex-direction:column;
 
-	// :hover
-	// {
-	// 	cursor: pointer;
-	// }
+
+	@media screen and (max-width: 767px) {
+		&:nth-child(2)
+		{
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 525px) {	
+		&:nth-child(3)
+		{
+			display: none;
+		}
+	}
 }
 
 .receipts__item:first-child
@@ -256,6 +266,15 @@ span
 	font-size: 12px;
 	border-radius: 5px;
 	padding: 5px 10px;
+
+	@media screen and (max-width: 525px) {
+	
+		&:last-child
+		{
+			display: none;
+		}
+
+	}
 }
 
 .item__button 
@@ -371,7 +390,7 @@ form input.receipts__email__btn
 	display: flex;
 	margin-top: 30px;
 	justify-content: space-evenly;
-
+	flex-wrap: wrap;
 
 
 }
@@ -386,6 +405,7 @@ form input.receipts__email__btn
 
 
 }
+
 
 .card__item__image
 {

@@ -1,271 +1,70 @@
-header
+// TOP
+
+.container
 {
-	margin-bottom: 20px;
+	max-width: 1140px;
 }
 
-.header__top-container
+.header__container-top
 {
-	max-width: 1366px;
-	margin: 0 auto;
-	padding: 15px 0 15px;
 	border-bottom: 1px solid #DFE0E1;
-
-
+	max-width: 1366px;
 }
 
-.header__logistics
+.link
 {
 	display: flex;
-
-
+	flex-direction:row-reverse;
 }
 
-.header__top-links
-{
-	display: flex;
-	justify-content: space-between;
-	color: red;
-	margin: 0 auto;
-	font-size: 14px;
-	font-weight: 400;
-	max-width: 1130px;
-	flex-wrap: wrap;
-
-	a
-	{
-		color: #1C294DCC;
-	}
-
-	@media screen and (max-width: 1043px) {
-		display: block;
-	}
-
-	@media screen and (max-width: 767px) {
-		padding: 0 20px;
-	}
-
-	@media screen and (max-width: 525px) {
-		display: none;
-	}
-}
-
-.header__contact-container a
+.bold-link
 {
 	font-weight: 600;
 }
 
-.header__link-container
+.header__links-top
 {
 	display: flex;
+}
+
+.header__link-top
+{
+	color: #1C294DCC;
 	align-items: center;
-	// margin-right: 3px;
+	margin: 17px 0;
+	margin-right: 32px;
 
-	
-}
-
-.header__contacts
-{
-	display: flex;
-	
-
-	::nth-child(2)
+	&:nth-child(3)
 	{
-		margin-right: 0;
+		margin-right: auto;
 	}
 }
 
-.header__link-container-top
+.header__top-link-icon
 {
-	margin-left: 8px;
-	margin-right: 31px
-}
-
-.header__contact-container:nth-child(2), .header__link-container
-{
-	margin-right: 5px;
-}
-
-
-//MIDDLE
-
-.header__middle-container
-{
-	padding-top: 20px;
 	display: flex;
-	justify-content: space-between;
-	color: red;
-	margin: 0 auto;
-	font-size: 14px;
-	font-weight: 400;
-	width: 1138px;
-	flex-wrap: wrap;
-
-	@media screen and (max-width: 1043px) {
-			display: block;
-		}
-
-	@media screen and (max-width: 767px) {
-		padding: 0 20px;
-	}
-
-	@media screen and (max-width: 525px) {
-		display: none;
-	}
+	padding-right: 10px;	
 }
 
-.header__middle-logo
-{
-	margin-right: 30px;
-}
-
-.header__middle-search
-{
-	margin-right: auto;
-}
-
-.field-form
+.header__link-top:last-child .header__top-link-icon:last-child 
 {
 	margin: 0;
-	padding: 0;
-	padding: 8px 10px;
-	width: 450px;
-	border: 1px solid #DFE0E1; 
-	border-radius: 5px 0 0 5px ;
-	outline: none; 
-	-webkit-appearance: none;
-
+	order: -1;
+	margin-left: 7px;
 }
 
-.search__form 
+// MID
+
+.header__container-mid
 {
-	display: flex;
-}
-
- .search-button-form
-{
-	background: #ff7a00;
-	color: #fff;
-	display: flex;
-	// box-sizing: border-box;
-	align-items: center;
-	justify-content: space-between;
-	padding: 9px 25px 9px 32px;
-	border: none;
-	overflow: none;
-	border-radius: 0 5px 5px 0;
-}
-
-.header__middle__container-links
-{
-	display: flex;
-    align-items: center;
-
-	@media screen and (max-width: 1043px) {
-			margin-top: 15px;
-	}
-
-	@media screen and (max-width: 767px) {
-		display: none;
-	}
-
-	@media screen and (max-width: 525px) {
-		display: none;
-	}
-}
-
-.header__middle__container-link
-{
-	position: relative;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	margin-left: 30px;
-	:not:last-child
-	{
-		margin-left: 0;
-	}
-	a
-	{
-		color: #1C294D;
-		font-size: 14px;
-		font-weight: 400;
-		line-height: 16px;
-		letter-spacing: 0em;
-		// text-align: left;
-
-		margin-left: 10px;
-	}
-
-
 }
 
-.header__middle__container-link .header__middle__basket
+.search-input
 {
-	top: -8px;
-	right: 58px;
-	position: absolute;
-	// display: block;
-	background: #FF7A00;
-	border-radius: 50%;
-	font-size: 9px;
-	width: 15px;
-	color: #fff;
-	text-align: center;
+	border: 1px solid #DFE0E1;
+	border-radius: 5px 0 0 5px;
+		
 }
 
-// HEADER__FOTER
-
-.header__bottom-container
-{
-	display: flex;
-	// justify-content: space-between;
-	margin: 13px auto 0;
-	font-size: 14px;
-	font-weight: 400;
-	width: 1138px;
-
-}
-
-.header__bottom-links
-{
-
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-}
-
-.header__bottom-link-container
-{
-	display: flex;
-	margin-right: 20px;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 20px;
-	letter-spacing: 0px;
-	text-align: left;
-
-	a
-	{
-		color: #1C294D;
-	}
-
-	:nth-child(1), :nth-child(2)
-	{
-		margin-right: 4px;
-	}
-}
-
-.active a
-{
-	color:#FF283D;
-
-}
-// MOBILE
-
-.header__input-mobile
-{
-	display: block; 
-	max-width: 700
-
-}

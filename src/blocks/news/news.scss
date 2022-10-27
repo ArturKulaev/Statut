@@ -45,6 +45,24 @@
 	// width: 263px;
 	display: flex;
 	flex-direction:column;
+
+	&:last-child
+	{
+		@media screen and (max-width: 1043px) {
+			display: none;
+		}
+	}
+
+	&:nth-child(2)
+	{
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	// @media screen and (max-width: 767px) {
+	// 		display: none;
+	// 	}
 }
 
 .news__card-container:last-child

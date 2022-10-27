@@ -1,3 +1,8 @@
+h2
+{
+	font-weight: 600;
+}
+
 .receipts
 {
 	margin-top: 30px;
@@ -11,6 +16,8 @@
 	align-items: baseline;
 	display: flex;
 	position: relative;
+	margin-bottom: 10px;
+
 }
 
 .receipts__slider__buttons
@@ -95,7 +102,7 @@ span
 	// width: 263px;
 	display: flex;
 	flex-direction:column;
-
+	flex-wrap: wrap;
 	// :hover
 	// {
 	// 	cursor: pointer;
@@ -182,6 +189,11 @@ span
 	font-size: 14px;
 	font-weight: 600;
 	line-height: 19px;
+}
+
+.item__description
+{
+	
 }
 
 .item__description__price
@@ -312,6 +324,18 @@ span
 	border-radius: 5px;
 	display: flex;
 	background: #0288D1;
+	
+
+	@media screen and (max-width: 1043px) {
+	margin-bottom: 10px;
+	}
+
+	@media screen and (max-width: 767px) {
+		flex-wrap: wrap;
+		padding: 0;
+		padding: 20px 10px;
+
+	}
 
 	.email__text
 	{
@@ -321,6 +345,17 @@ span
 		color: #fff;
 		font-size: 18px;
 		font-weight: 700;
+
+		@media screen and (max-width: 1043px) {
+			margin-left: 10px;
+		}
+
+
+		@media screen and (max-width: 767px) {
+			margin: 0;
+			margin: 0 auto;
+
+		}
 	}
 }
 
@@ -329,6 +364,12 @@ span
 	position: absolute;
 	top: 40px;
 	left: 85px;
+
+	@media screen and (max-width: 767px) {
+			top: 20px;
+			left: 75px;
+
+		}
 }
 
 
@@ -337,6 +378,13 @@ span
 {
 	outline: none;
 	border: 1px solid rgba(121, 134, 203, 1%);
+	width: 100%;
+
+	@media screen and (max-width: 767px) {
+		
+		width: 100%;
+
+	}
 }
 
 .receipts__email__input

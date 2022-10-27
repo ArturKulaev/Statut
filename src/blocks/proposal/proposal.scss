@@ -4,13 +4,47 @@
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
-	flex-wrap:wrap;
+	// flex-wrap:wrap;
+}
+
+.left__block
+{
+	margin-left: auto;
+
+	@media screen and (max-width: 1043px) {
+		// display: block;
+		margin: 0 auto;
+	}
+}
+
+
+
+.book-mobile
+{
+
+	padding: 30px;
+
+	display: none;
+
+	@media screen and (max-width: 1043px) {
+		display: block;
+		
+	}
 }
 
 .slider__container
 {
 	max-width: 750px;
 	position: relative;
+
+	@media screen and (max-width: 1043px) {
+		// display: block;
+		margin: 0 auto;
+	}
+	
+	@media screen and (max-width: 525px) {
+		max-width: 355px;
+	}
 }
 
 .slider-item
@@ -20,6 +54,19 @@
 	text-align: center;
 	height: 350px;
 	min-width: 750px;
+	
+
+	
+	@media screen and (max-width: 1043px) {
+		display: block;
+		margin: 0 auto;
+	}
+
+	@media screen and (max-width: 767px) {
+		min-width: 350px;
+		max-height: 150px;
+	}
+
 	
 }
 // .slider-container
@@ -44,13 +91,23 @@
 	top: 63%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
+	@media screen and (max-width: 767px) {
+		font-size: 17px;
+		 top: 65%;
+	}
 }
+	
 
 .center p:first-child {
 	font-family: 'Roboto', sans-serif;
 	font-size: 94px;
 	font-weight: 800;
-	top:45%
+	top:45%;
+
+	@media screen and (max-width: 767px) {
+		font-size: 64px;
+	}
 }
 
 
@@ -75,6 +132,15 @@
 	height: 45px;	
 	border: none;
 	outline: none;
+}
+
+.slider-buttons
+{
+
+	@media screen and (max-width: 1043px) {
+		display: none;
+	}
+
 }
 
 .btn:first-child {
@@ -120,6 +186,8 @@ i {
 	display: flex;
 	justify-content: space-between;
 	max-width: 750px ;
+
+	flex-wrap: wrap;
 }
 
 
@@ -139,6 +207,17 @@ i {
 		// padding: 33px 0;
 		z-index: 1;
 	}
+
+	@media screen and (max-width: 767px) {
+		margin: 0 auto;
+
+		&:first-child
+		{
+			margin-bottom: 10px;
+		}
+	}
+
+	
 
 }
 
@@ -183,10 +262,25 @@ i {
 
 // BOOK
 
-.book
+.proposal__container .book
+{
+	padding: 0 25px;
+	@media screen and (max-width: 1043px) {
+		display: none;
+		
+	}
+}
+
+.proposal.book
 {
 	padding: 20px;
 	max-width: 360px;
+
+	@media screen and (max-width: 1043px) {
+		display: none;
+	}
+		
+	
 }
 
 .book__header
@@ -252,6 +346,17 @@ i {
 {
 
 	display: flex;
+
+
+	@media screen and (max-width: 1043px) {
+		display: block;
+	}
+
+	@media screen and (max-width: 767px) {
+		
+	}
+
+	
 
 	:not(:last-child)
 	{
