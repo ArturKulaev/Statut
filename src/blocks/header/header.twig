@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header ">
 	<div class="header__container-top container">
 		<div class="header__links-top container">
 			<a class="header__link-top link">Москва
@@ -25,28 +25,37 @@
 			{% include 'assets/svg/logo.svg' %}
 		</a>
 		<form action="" class="header__form-search form-search">
-			<input type="text" class="header__search-input search-input">
-			<input type="submit" class="header__button-search button-search">
+			<input type="text" class="header__search-input search-input" value="Автор, название, ISBN">
+			<button class="header__input-button-search button-search">
+				<span class="header__input-search-icon icon">
+					{% include 'assets/svg/search.svg' %}
+				</span>
+				
+				<span class="header__input-search-icon-mobile"><!-- header__input-search-icon icon -->
+					{% include 'assets/svg/searchgray.svg' %}
+				</span>
+				<span class="header__button-text button-text">Искать</span> 
+			</button>
 		</form>
 		<div class="header__links-container-mid">
 			<a href="" class="header__link-mid link">Отложено
-				<div class="header__top-link-icon icon">{% include 'assets/svg/mark.svg' %}</div>
+				<div class="header__mid-link-icon icon">{% include 'assets/svg/mark.svg' %}</div>
 			</a>
 			<a href="" class="header__link-mid link">Войти
-				<div class="header__top-link-icon icon">{% include 'assets/svg/smile.svg' %}</div>
+				<div class="header__mid-link-icon icon">{% include 'assets/svg/smile.svg' %}</div>
 			</a>
-			<a href="" class="header__link-mid link">Корзина
-				<div class="header__top-link-icon icon">{% include 'assets/svg/basket.svg' %}</div>
+			<a href="" class="header__link-mid link"> <span class="basket">Корзина</span>
+				<div class="header__mid-link-icon icon">{% include 'assets/svg/basket.svg' %}</div>
 			</a>
 		</div>
 	</div>
-	<div class="header__container-bot container">
+	<div class="header__container-bot ">
 		<div class="header__links-container-bot">
-			<ul>
-				<li class="header__link-bot"> <a href="">Каталог</a></li>
+			<ul class="header__list-bot container">
+				<li class="header__link-bot"> <span class="header__list-icon"> {% include 'assets/svg/burger.svg' %}</span> <a href="">Каталог</a></li>
 				<li class="header__link-bot"> <a href="">Авторы</a></li>
 				<li class="header__link-bot"> <a href="">Новинки</a></li>
-				<li class="header__link-bot"> <a href="">Скидки</a></li>
+				<li class="header__link-bot"> <span class="header__list-icon"> {% include 'assets/svg/tag.svg' %}</span><a href="" class=" link_active">Скидки</a></li>
 				<li class="header__link-bot"> <a href="">Партнёрам</a></li>
 				<li class="header__link-bot"> <a href="">Мы</a></li>
 			</ul>

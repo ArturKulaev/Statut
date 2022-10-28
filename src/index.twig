@@ -1,11 +1,8 @@
 {% extends "layouts/layout.twig" %}
 
 {% block page %}
-	
-	{#
-		Пример подключения файла
-		{% include '/blocks/component/component.twig' %}
-		Пример подключения svg
-		{% include '/assets/component/component.svg' %}
-	#}
+	{% include "blocks/proposal/proposal.twig" %}
+	{% include "blocks/receipts/receipts.twig" %}
+	{% include "blocks/soon/soon.twig" %}
+	{% include "blocks/news/news.twig" %}
 {% endblock %}

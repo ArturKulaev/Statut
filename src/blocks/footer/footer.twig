@@ -1,4 +1,4 @@
-<footer>
+<footer class="footer ">
 	<div class="footer__top">
 		<div class="footer__container">
 			<div class="footer__top-container">
@@ -6,10 +6,13 @@
 					{% include 'assets/svg/logo.svg' %}
 				</div>
 				<div class="footer__search search__form">
-					<form class="footer__form-search search__form" action="">
-						<input type="text" class="footer__field-form field-form" placeholder="Введите свой Email и получите скидку">
-						<button class="footer__search-button-form search-button-form">
-						{% include 'assets/svg/airplane.svg' %}
+					<form action="" class="footer__form-search form-search">
+						<input type="text" class="footer__search-input search-input" value="Введите свой Email и получите скидку">
+						<button class="footer__input-button-search button-search">
+							<span class="">
+								{% include 'assets/svg/airplane.svg' %}
+							</span>
+							
 						</button>
 					</form>
 				</div>
@@ -49,7 +52,6 @@
 				<a href="">Новинки</a>
 				<a href="">Скидки и акции</a>
 			</div>
-			
 			<div class="footer__link-container">
 				<h5>Прайс-лист</h5>
 				<a href="">
