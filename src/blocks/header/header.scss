@@ -36,6 +36,7 @@
 	display: flex;
 	flex-direction:row-reverse;
 	font-size: 14px;
+	color: #1C294D;
 }
 
 .bold-link
@@ -48,7 +49,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	@media screen and (max-width: 543px) {
-		display: none;
+		display: flex;
 	}
 }
 
@@ -275,6 +276,11 @@
 	display: flex;
 	justify-content: space-between;
 	margin-right: 25px;
+
+	a
+	{
+		color: #1C294D;
+	}
 
 	&:not(:first-child) , a
 	{
