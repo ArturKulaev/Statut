@@ -389,9 +389,15 @@ form input.receipts__email__btn
 {
 	display: flex;
 	margin-top: 30px;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	flex-wrap: wrap;
 
+	@media screen and (max-width: 767px)
+	{
+		flex-direction: column-reverse;
+		gap:10px;
+		align-items: center;
+	}
 
 }
 
@@ -399,11 +405,14 @@ form input.receipts__email__btn
 {
 	margin-left: 87px;
 	position: relative;
-	max-width: 280px;
+	max-width: 263px;
 	margin-right: 40px;
 	display: flex;
 
-
+	@media screen and (max-width: 767px)
+	{
+		max-width: 360px;
+	}
 }
 
 

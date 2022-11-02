@@ -16,7 +16,7 @@ h2
 	align-items: baseline;
 	display: flex;
 	position: relative;
-	margin-bottom: 10px;
+	
 
 }
 
@@ -76,9 +76,11 @@ h2
 
 .receipts__items-container
 {
-	
 	display: flex;
 
+	@media screen and (max-width: 767px) {
+		margin: 0 10px;
+	}
 }
 
 span
@@ -107,6 +109,11 @@ span
 	// {
 	// 	cursor: pointer;
 	// }
+
+
+	@media screen and (max-width: 767px) {
+		padding: 20px 10px;
+	}
 }
 
 .receipts__item:first-child
@@ -279,6 +286,10 @@ span
 	{
 		padding: 0 20px;
 		margin-right: 10px;
+
+		@media screen and (max-width: 767px) {
+		padding: 0 5px;
+	}
 	}
 
 	button
@@ -409,4 +420,11 @@ form input.receipts__email__btn
 	background: #0288D1;
 	border: 1px solid #fff;
 	padding: 10px 25px;
+
+
+	@media screen and (max-width: 767px) {
+		max-width: 375px;
+		width: 100%;
+		margin-top: 10px;
+	}
 }

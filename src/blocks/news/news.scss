@@ -1,4 +1,10 @@
-.news { margin: 70px 0 30px; }
+.news
+{
+	margin: 70px 0 30px;
+	@media screen and (max-width: 767px) {
+			margin: 10px 0 30px;
+		}
+}
 .news__container
 {
 	max-width: 1138px;
@@ -14,6 +20,19 @@
 	align-items: baseline;
 	display: flex;
 	position: relative;
+
+	@media screen and (max-width: 767px) {
+			padding: 17px 20px;
+		}
+}
+
+.title-container
+{
+	padding: 17px 20px;
+
+	@media screen and (max-width: 767px) {
+			padding: 17px 20px;
+		}
 }
 
 .news__cards-container
@@ -50,7 +69,9 @@
 	}
 
 	@media screen and (max-width: 767px) {
-			border-right: 0;
+			padding: 20px 10px;
+			margin: 0 10px;
+			border-bottom: 1px solid #1C294D26;
 		}
 	
 }
@@ -100,4 +121,17 @@ button.news__card-button
 	padding: 10px 66px;
 	border-radius: 5px;
 	font-weight: 600;
+
+	@media screen and (max-width: 767px) {
+			max-width: 375px;
+		}
+}
+
+.news-button
+{
+	display: none;
+
+	@media screen and (max-width: 767px) {
+			display: block;
+		}
 }
