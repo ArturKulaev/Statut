@@ -16,8 +16,6 @@ h2
 	align-items: baseline;
 	display: flex;
 	position: relative;
-	
-
 }
 
 .receipts__slider__buttons
@@ -37,12 +35,8 @@ h2
 		padding: 3px 7px;
 	}
 
-	
-
 	li
-	{
-		padding: 0;
-	}
+	{ padding: 0; }
 
 }
 
@@ -58,13 +52,8 @@ h2
 		padding: 3px 7px;
 	}
 
-	
-
 	li
-	{
-		padding: 0;
-	}
-
+	{ padding: 0; }
 }
 
 .receipts__container
@@ -171,7 +160,6 @@ span
 
 	p
 	{
-		
 		color: #000;
 		font-weight: 600;
 	}
@@ -196,11 +184,6 @@ span
 	font-size: 14px;
 	font-weight: 600;
 	line-height: 19px;
-}
-
-.item__description
-{
-	
 }
 
 .item__description__price
@@ -276,7 +259,7 @@ span
 	padding: 5px 10px;
 }
 
-.item__button 
+.item__button
 {
 
 	margin-top: 15px;
@@ -286,7 +269,6 @@ span
 	{
 		padding: 0 20px;
 		margin-right: 10px;
-
 		@media screen and (max-width: 767px) {
 		padding: 0 5px;
 	}
@@ -301,8 +283,6 @@ span
 		font-size: 14px;
 		font-weight: 500;
 		line-height: 15px;
-
-
 	}
 
 }
@@ -312,7 +292,7 @@ span
 	text-align: center;
 }
 
-.show-books 
+.show-books
 {
 	border: none;
 	p
@@ -335,7 +315,6 @@ span
 	border-radius: 5px;
 	display: flex;
 	background: #0288D1;
-	
 
 	@media screen and (max-width: 1043px) {
 	margin-bottom: 10px;
@@ -392,7 +371,7 @@ span
 	width: 100%;
 
 	@media screen and (max-width: 767px) {
-		
+
 		width: 100%;
 
 	}
