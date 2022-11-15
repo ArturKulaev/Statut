@@ -1,0 +1,324 @@
+// HEADER__TOP
+
+.header hr
+{
+	color: #DFE0E1;
+	background-color: #DFE0E1;
+	border:0px none;
+	height:1px;
+	clear:both;
+	margin: 0;
+
+	&:last-child
+	{
+		background: #ECECEC;
+		display: block;
+		@include mq($tablet)
+		{
+			display:none;
+		}
+	}
+	&:first-child{
+		@include mq($tablet)
+		{
+			display:none;
+		}
+	}
+}
+
+.header__top-list
+{
+	display: flex;
+	justify-content: space-between;
+	gap:33px;
+
+	li
+	{
+		display: flex;
+		align-items: center;
+	}
+
+	a
+	{
+		font-size: 14px;
+	}
+
+	&:first-child
+	{
+		margin-right: auto;
+	}
+}
+
+.header .header__top.container
+{
+	display: none;
+	padding: 0;
+	padding: 17px 40px 15px;
+	flex-wrap: wrap;
+
+	@include mq($tablet)
+	{
+		display: flex;
+	}
+}
+
+.header__top-link
+{
+	display: flex;
+	margin-left: 7px;
+	color: #1C294DCC;
+}
+
+.header__top-link_bold
+{
+	font-weight: 600;
+
+	&:nth-child(2)
+	{
+		padding-right: 5px;
+	}
+}
+
+// HEADER__MID
+
+.header__mid-logo svg
+{
+	width: 44px;
+	height: 35px;
+	margin-top: 5px;
+	margin-right: 5px;
+	@include mq($tablet)
+	{
+		width: auto;
+		height: auto;
+		margin-right: 0;
+		margin-top: 0;
+	}
+}
+
+.header__mid-logo-burger-mobile
+{
+	display: block;
+	margin-right: 14px;
+	padding-top: 8px;
+	@include mq($tablet)
+	{
+		display: none;
+	}
+}
+
+.header__mid-logo_desktop
+{
+	display: none;
+	@include mq($tablet)
+	{
+		display:block;
+	}
+}
+
+.header__mid-logo-mobile
+{
+	display: block;
+	@include mq($tablet)
+	{
+		display: none;
+	}
+}
+
+.header__mid-form
+{	max-width: 573px;
+	width: 100%;
+	height: 40px;
+	display: none;
+	margin-left: 30px;
+	margin-right: auto;
+	@include mq($tablet)
+	{
+		display: flex;
+	}
+}
+
+.header__mid-form-mobile
+{
+	max-width: 573px;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	margin-left: 30px;
+	margin-right: auto;
+
+	.header__mid-form-input
+	{
+		border: none;
+		padding-left: 0;
+		// min-width: 195px;
+	}
+
+	@include mq($tablet)
+		{
+			display: none;
+		}
+
+	.header__mid-form-button
+	{
+		background-color: #fff;
+		padding: 0;
+		width: 68px;
+	}
+}
+
+.header__mid-form-input
+{
+	padding-left: 15px;
+	width: 100%;
+	border:1px solid #DFE0E1;
+	border-radius: 5px 0 0 5px;
+	border-right: none;
+	font-size: 14px;
+}
+
+.header__mid-form-button
+{
+	width: 145px;
+	border: none;
+	background-color: #FF7A00;
+	display: flex;
+	align-items:center;
+	border-radius: 0 5px 5px 0;
+	padding: 0 25px;
+	color: #fff;
+
+	span
+	{
+		font-size: 14px;
+		margin-left: 10px;
+	}
+}
+
+.header__mid
+{
+	margin-top: 11px;
+	margin-bottom: 12px;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+
+	@include mq($tablet)
+		{
+			margin-top: 20px;
+			display:flex;
+			flex-wrap:wrap;
+			padding: 0;
+		}
+}
+
+.header__mid-nav
+{
+	display: none;
+
+	@include mq($tablet)
+		{
+			display:flex;
+		}
+
+	li
+	{
+		margin-left: 30px;
+		display: flex;
+		align-items: center;
+	}
+
+	li:first-child {margin-left: 0;}
+}
+
+.header__mid-nav-link
+{
+	display: flex;
+	align-items:center;
+
+	&:not(:last-child)
+	{
+		margin-right: 35px;
+	}
+
+	span
+	{
+		font-size: 14px;
+		margin-left: 7px;
+		color: #1C294D;
+	}
+}
+
+.header__mid-nav-counter
+{
+	position: relative;
+}
+
+.header__mid-nav-counter::after
+{
+	position: absolute;
+	content: "10";
+	width: 20px;
+	height: 20px;
+	color: #fff;
+	background-color: #FF7A00;
+	font-size: 12px;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+	border-radius: 50px;
+	bottom: 12px;
+	left: 14px;
+	@include mq($tablet)
+	{
+		bottom: 10px;
+		left: 10px;
+		width: 15px;
+		height: 15px;
+		font-size: 9px;
+	}
+}
+
+.header__mid-counter-mobile
+{
+	display: block;
+	height: 15px;
+	width: 15px;
+	margin-right: 9px;
+	padding-bottom: 18px;
+	@include mq($tablet)
+	{
+		display: none;
+	}
+}
+
+// HEADER__BOT
+
+.header__bot-nav
+{
+	display: none;
+
+	@include mq($tablet)
+	{
+		display: flex;
+	}
+	li:not(:first-child)
+	{
+		margin-left: 25px;
+	}
+
+
+}
+
+.header__bot-nav-link
+{
+	display: flex;
+	align-items: center;
+	color: #1C294D;
+	font-size: 14px;
+
+	span:nth-last-child(1)
+	{
+		margin-left: 5px;
+	}
+}
