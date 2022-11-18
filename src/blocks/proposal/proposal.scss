@@ -56,6 +56,28 @@
 	}
 }
 
+.proposal__radio-buttons
+{
+	position: absolute;
+	left: 42%;
+	bottom: 28px;
+	display: flex;
+	gap: 5px;
+}
+
+.proposal__button-radio
+{
+	height: 2px;
+	width: 25px;
+	background-color: #fff;
+	opacity: .5;
+}
+
+.proposal__button-radio_active
+{
+	opacity: 1;
+}
+
 .proposal__button_right
 {
 	top: 43%;
