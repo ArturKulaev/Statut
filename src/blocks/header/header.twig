@@ -1,23 +1,25 @@
 <header class="header">
-	<div class="header__top container">
-		<ul class="header__top-list">
-			<li>{% include "assets/svg/mesto.svg" %}<a href="" class="header__top-link">Москва</a></li>
-			<li>{% include "assets/svg/box.svg" %}<a href="" class="header__top-link">Доставка и оплата</a></li>
-			<li>{% include "assets/svg/adress.svg" %}<a href="" class="header__top-link">Адрес и часы работы</a></li>
-		</ul>
-		<ul class="header__top-list">
-			<li>{% include "assets/svg/mail.svg" %}<a href="" class="header__top-link header__top-link_bold">market@estatut.ru</a></li>
-			<li>{% include "assets/svg/phone.svg" %}<a href="" class="header__top-link header__top-link_bold">8 (968) 660-65-50</a>{% include "assets/svg/info.svg" %}</li>
-		</ul>
+	<div class="container">
+		<div class="header__top">
+			<ul class="header__top-list">
+				<li>{% include "assets/svg/mesto.svg" %}<a href="" class="header__top-link">Москва</a></li>
+				<li>{% include "assets/svg/box.svg" %}<a href="" class="header__top-link">Доставка и оплата</a></li>
+				<li>{% include "assets/svg/adress.svg" %}<a href="" class="header__top-link">Адрес и часы работы</a></li>
+			</ul>
+			<ul class="header__top-list">
+				<li>{% include "assets/svg/mail.svg" %}<a href="" class="header__top-link header__top-link_bold">market@estatut.ru</a></li>
+				<li>{% include "assets/svg/phone.svg" %}<a href="" class="header__top-link header__top-link_bold">8 (968) 660-65-50</a>{% include "assets/svg/info.svg" %}</li>
+			</ul>
+		</div>
 	</div>
 	<hr>
-	<div class="header__container container">
+	<div class="container">
 		<div class="header__mid">
 			<a class="header__mid-logo-burger-mobile">
 				{% include "assets/svg/burger.svg" %}
 			</a>
-			<div class="header__mid-logo">
-				<a href="index.html" class="header__mid-logo">{% include "assets/svg/logo.svg" %}</a>
+			<div class="header__mid-logo g-logo">
+				<a href="index.html">{% include "assets/svg/logo.svg" %}</a>
 			</div>
 			<form class="header__mid-form">
 				<input type="text" placeholder="Автор, название, ISBN" class="header__mid-form-input">
@@ -45,5 +47,5 @@
 			</ul>
 		</div>
 	</div>
-	<hr>
+	<hr class="header__hr_mobile">
 </header>

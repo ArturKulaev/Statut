@@ -1,23 +1,39 @@
+.receipts
+{
+	margin-bottom: 18px;
+	@include mq($tablet)
+		{
+			margin-bottom: 40px;
+		}
+}
+
 .receipts__container.container
 {
 	// padding: 0 20px;
 }
 
-.receipts__title
+.g-title
 {
-	padding: 0 10px;
+	padding: 0 10px 15px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 20px;
+	// margin-bottom: 20px;
+	@include mq($tablet)
+		{
+			padding: 0 26px 15px;
+		}
 
 	h2
 	{
+		font-size: 19px;
 		margin-bottom: 0;
+		color: #1C294D;
+		font-weight: 600;
 	}
 }
 
-.receipts__title-buttons
+.g-title-buttons
 {
 	display: flex;
 	align-items: center;
@@ -29,28 +45,280 @@
 	align-items: center;
 	border: 1px solid #1C294D26;
 	outline: none;
-	padding: 10px 10px;
+	padding: 10px 12px;
+
+	&:first-child{border-radius: 5px 0 0 5px;}
+	&:last-child{border-radius: 0 5px 5px 0;}
+
 }
 
-.receipts__title-button_left{border-radius: 5px 0 0 5px;}
-.receipts__title-button_right{border-radius: 0 5px 5px 0;}
+// RECEIPTS__CAROUSEL
 
-// RECEIPTS__CORUSEL
+.receipts__carousel
+{
+	border-top: 1px solid #1C294D26;
+	display: flex;
+	border-bottom: 1px solid #1C294D26;
+	justify-content: center;
+
+
+	@include mq($widescreen)
+		{
+			justify-content: space-between;
+		}
+}
+
+.receipts__carousel-book
+{
+
+	padding: 10px;
+	padding-top: 22px;
+	padding-bottom: 20px;
+	// max-width: 178px;
+	@include mq($tablet)
+		{
+		max-width: 263px;
+		padding: 25px 20px;
+		padding-bottom: 22px;
+		}
+
+	border-right: 1px solid #1C294D26;
+
+	&:last-child{
+		border-right: none;
+	}
+
+	&:nth-child(3) .receipts__book-price
+	{
+		span:first-child
+		{
+			position: relative;
+			color: #1C294D80;
+			font-size: 11px;
+
+			svg
+			{
+				position: absolute;
+				top:3px;
+				left: 1px;
+			}
+		}
+		span:last-child
+		{
+			margin-left: 7px;
+			color: #0DB98C;
+			font-size: 11px;
+		}
+	}
+
+	&:nth-child(3)
+	{
+		display: none;
+		@include mq($desktop)
+		{
+		display: block;
+		}
+	}
+
+	&:nth-child(2)
+	{
+		display: none;
+		@include mq($widescreen)
+		{
+			display: block;
+		}
+	}
+}
 
 .receipts__book-img
 {
 	position: relative;
+	text-align: center;
+	max-width: 126px;
+	max-height: 180px;
+	// height: 100%;
+	// width: 100%;
+	margin: 0 auto 15px;
 
-	span{position: absolute;}
+	@include mq($widescreen)
+		{
+			max-width: 140px;
+			max-height: 200px;
+		}
 
-	span:nth-child(1)
+	span
 	{
-		background-color: #EEE9F7;
-		font-size: 22px;
+		position: absolute;
+		font-size: 12px;
+		padding: 3px 10px;
+		border-radius: 5px;
 	}
 
 	span:nth-child(2)
 	{
+		background-color: #EEE9F7;
+		left: -10px;
+		color: #AC8EE3;
+		top: -8px;
+
+		@include mq($tablet)
+		{
+		left: -42px;
+		top: -3px;
+		}
+	}
+
+	span:nth-child(3)
+	{
 		background-color: #FFEEEE;
+		color: #FF4F52;
+		left: -10px;
+		top: 27px;
+
+		@include mq($tablet)
+		{
+		left: -42px;
+		top: 32px;
+		}
+	}
+}
+
+.receipts__book-img1
+{
+	max-width: 140px;
+	max-height: 200px;
+	width: 100%;
+	height: 100%;
+}
+
+.receipts__book-img1
+{
+	max-width: 130px;
+	max-height: 200px;
+	width: 100%;
+	height: 100%;
+}
+
+.receipts__book-img1
+{
+	max-width: 147px;
+	max-height: 200px;
+	width: 100%;
+	height: 100%;
+}
+
+.receipts__book-grade
+{
+	display: block;
+	margin-top: 8px;
+
+	@include mq($tablet)
+		{
+			display: flex;
+			gap: 10px;
+			margin-top: 10px;
+		}
+}
+
+.receipts__book-reiting
+{
+	background: #FBC02D;
+	background: rgba(251, 192, 45, 0.15);
+	font-size: 12px;
+	color: #FBC02D;
+	padding: 3px 8px;
+	border-radius: 5px;
+	// margin-bottom: 5px;
+	display: flex;
+	align-items: center;
+	width: 52px;
+	// margin-bottom: 5px;
+
+	@include mq($tablet)
+		{
+			margin-bottom: 0;
+			// margin-right: 5px;
+		}
+
+	svg{
+		margin-right: 3px;
+	}
+}
+
+.receipts__book-recomendation
+{
+	background: rgba(121, 134, 203, 0.15);
+	font-size: 12px;
+	color:#7986CB;
+	padding: 4px 12px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	// width: 144px;
+	svg{
+		margin-right: 3px;
+	}
+}
+
+.receipts__book-button
+{
+	button:first-child
+	{
+		max-width: 114px;
+
+		@include mq($tablet)
+		{
+			max-width:146px;
+			width: 100%;
+			// margin-right: 10px;
+		}
+	}
+
+	button:last-child
+	{
+		padding: 10px 12px;
+
+		@include mq($tablet)
+		{
+			padding: 11px 15px;
+		}
+	}
+}
+
+.g-show
+{
+	padding-top: 8px;
+	display: flex;
+	justify-content: center;
+}
+
+.g-show-button
+{
+	border: none;
+
+	span
+	{
+		font-weight: 600;
+		font-size: 13px;
+	}
+}
+
+.receipts__show-button_desktop
+{
+	display: none;
+
+	@include mq($tablet)
+	{
+		display: block;
+	}
+}
+
+.g-show-button_mobile
+{
+	display: block;
+
+	@include mq($tablet)
+	{
+		display: none;
 	}
 }

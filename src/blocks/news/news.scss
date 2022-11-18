@@ -1,4 +1,133 @@
-div 
+.news
 {
-	display: block;
+	margin-bottom: 27px;
+
+	@include mq($tablet)
+		{
+			margin-bottom: 21px;
+		}
 }
+
+.news__title
+{
+	border-bottom: 1px solid #1C294D26;
+	margin-bottom: 10px;
+
+	@include mq($tablet)
+		{
+			margin-bottom: 0;
+		}
+}
+
+.news__carousel
+{
+	display: flex;
+}
+
+.news__carousel-card
+{
+	padding: 10px;
+	border-left: 1px solid #1C294D26;
+	display: none;
+
+	&:nth-child(2)
+	{
+	@include mq($mobile)
+		{
+			display: block;
+		}
+	}
+
+	&:nth-child(3)
+	{
+	@include mq($desktop)
+		{
+			display: block;
+		}
+	}
+
+	@include mq($tablet)
+	{
+		padding: 27px 29px;
+	}
+
+	time
+	{
+		color: #1C294D80;
+		font-size: 12px;
+	}
+
+	&:first-child
+	{
+	border-left: none;
+	display: block;
+	border-bottom: 1px solid #1C294D26;
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+
+	@include mq($desktop)
+		{
+			padding-bottom: 10px;
+			border-bottom: none;
+		}
+	}
+
+}
+
+.news__card-img
+{
+	text-align: center;
+	margin-bottom: 3px;
+	img
+	{
+		width: 100%;
+		border-radius: 5px;
+		object-fit: cover;
+
+		@include mq($tablet)
+		{
+			max-width: 320px;
+		}
+	}
+}
+
+.news__card-text
+{
+	h4
+	{
+		color: #1C294D;
+		font-size: 15px;
+		line-height: 1.3em;
+		letter-spacing: 0;
+		margin-bottom: 15px;
+
+		@include mq($tablet)
+		{
+			bottom: 5px;
+		}
+	}
+
+	p
+	{
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 19px;
+		margin-bottom: 10px;
+	}
+}
+
+.news__card-button
+{
+	width: 100%;
+	border: 1px solid  #1C294D26;
+	border-radius: 5px;
+	padding: 10px 0;
+	font-size: 14px;
+
+
+		@include mq($tablet)
+		{
+			max-width: 180px;
+		}
+}
+

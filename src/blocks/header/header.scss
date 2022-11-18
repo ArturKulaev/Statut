@@ -1,5 +1,14 @@
 // HEADER__TOP
 
+.header
+{
+	margin-bottom: 20px;
+	@include mq($tablet)
+		{
+			margin-bottom: 5px;
+		}
+}
+
 .header hr
 {
 	color: #DFE0E1;
@@ -8,34 +17,54 @@
 	height:1px;
 	clear:both;
 	margin: 0;
+	margin-bottom: 11px;
+
+	@include mq($tablet)
+		{
+			
+			margin-bottom: 15px;
+
+		}
 
 	&:last-child
 	{
 		background: #ECECEC;
 		display: block;
+		margin-bottom: 0;
 		@include mq($tablet)
 		{
 			display:none;
+			margin-bottom: 105px;
+
 		}
 	}
 	&:first-child{
 		@include mq($tablet)
 		{
+			margin-bottom: 15px;
 			display:none;
+
 		}
 	}
+}
+
+.header__top
+{
+	display: flex;
+	justify-content: space-between;
 }
 
 .header__top-list
 {
 	display: flex;
 	justify-content: space-between;
-	gap:33px;
+	gap:30px;
 
 	li
 	{
 		display: flex;
 		align-items: center;
+		gap:5px;
 	}
 
 	a
@@ -43,17 +72,21 @@
 		font-size: 14px;
 	}
 
-	&:first-child
-	{
-		margin-right: auto;
-	}
+	// &:first-child
+	// {
+	// 	margin-right: auto;
+	// }
+
+	justify-content: stretch;
 }
 
-.header .header__top.container
+
+
+.header .header__top
 {
 	display: none;
 	padding: 0;
-	padding: 17px 40px 15px;
+	padding: 15px 0;
 	flex-wrap: wrap;
 
 	@include mq($tablet)
@@ -65,23 +98,35 @@
 .header__top-link
 {
 	display: flex;
-	margin-left: 7px;
 	color: #1C294DCC;
 }
 
 .header__top-link_bold
 {
 	font-weight: 600;
-
-	&:nth-child(2)
-	{
-		padding-right: 5px;
-	}
 }
 
 // HEADER__MID
 
-.header__mid-logo svg
+.header__mid
+{
+	// margin-top: 11px;
+
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+
+	@include mq($tablet)
+		{
+			margin-bottom: 7px;
+			display:flex;
+			flex-wrap:wrap;
+			padding: 0;
+			margin-bottom: 17px;
+		}
+}
+
+.g-logo svg
 {
 	width: 44px;
 	height: 35px;
@@ -187,29 +232,13 @@
 	border-radius: 0 5px 5px 0;
 	padding: 0 25px;
 	color: #fff;
+	gap:8px;
 
 	span
 	{
 		font-size: 14px;
-		margin-left: 10px;
+		// margin-left: 10px;
 	}
-}
-
-.header__mid
-{
-	margin-top: 11px;
-	margin-bottom: 12px;
-	display: flex;
-	align-items: center;
-	padding: 0 10px;
-
-	@include mq($tablet)
-		{
-			margin-top: 20px;
-			display:flex;
-			flex-wrap:wrap;
-			padding: 0;
-		}
 }
 
 .header__mid-nav
@@ -271,8 +300,8 @@
 	left: 14px;
 	@include mq($tablet)
 	{
-		bottom: 10px;
-		left: 10px;
+		bottom: 12px;
+		left: 12px;
 		width: 15px;
 		height: 15px;
 		font-size: 9px;
@@ -301,12 +330,8 @@
 	@include mq($tablet)
 	{
 		display: flex;
+		gap: 25px;
 	}
-	li:not(:first-child)
-	{
-		margin-left: 25px;
-	}
-
 
 }
 
@@ -316,9 +341,5 @@
 	align-items: center;
 	color: #1C294D;
 	font-size: 14px;
-
-	span:nth-last-child(1)
-	{
-		margin-left: 5px;
-	}
+	gap: 5px;
 }

@@ -2,7 +2,9 @@
 	<div class="proposal__container container">
 		<div class="proposal__wrapper">
 			<div class="proposal__slider">
-				<img src="img/slider.png" alt="">
+				<img src="img/slider.png" alt="#">
+				<button class="proposal__button proposal__button_left g-title-button">{% include "assets/svg/arrowSlideLeft.svg" %}</button>
+				<button class="proposal__button proposal__button_right g-title-button">{% include "assets/svg/arrowSlideRight.svg" %}</button>
 			</div>
 			<div class="proposal__book-mobile">
 				<div class="proposal__book-title">
@@ -12,15 +14,15 @@
 				<div class="proposal__book-img">
 					<img src="img/bookday.png" alt="">
 				</div>
-				<div class="proposal__book-genre">
+				<div class="proposal__book-genre  g-book-genre">
 					<span>Корпоративное право</span>
 				</div>
-				<div class="proposal__book-description">
+				<div class="proposal__book-description g-book-description">
 					<span>Инвестирование: способы, риски, субъекты : монография</span>
 				</div>
-				<div class="proposal__book-author"><span>Майфат А.В.</span></div>
-				<div class="proposal__book-price">4 450 ₽ </div>
-				<div class="proposal__book-button">
+				<div class="proposal__book-author g-book-author"><span>Майфат А.В.</span></div>
+				<div class="proposal__book-price g-book-price">4 450 ₽ </div>
+				<div class="proposal__book-button g-book-button">
 					<button>
 						{% include "assets/svg/bagorange.svg" %}
 						<span>В корзину</span>

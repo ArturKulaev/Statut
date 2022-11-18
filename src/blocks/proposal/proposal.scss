@@ -1,12 +1,12 @@
 .proposal
 {
 	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 
 	@include mq($desktop)
 	{
 		margin-top: 50px;
-		margin-bottom: 30px;
+		margin-bottom: 45px;
 	}
 }
 
@@ -36,7 +36,54 @@
 
 	@include mq($tablet)
 	{
-		padding: 0 45px;
+		justify-content: center;
+	}
+
+	@include mq($widescreen)
+	{
+		justify-content: space-between;
+	}
+}
+
+.proposal__slider
+{
+	position: relative;
+	margin-bottom: 2px;
+
+	@include mq($tablet)
+	{
+		margin-bottom: 22px;
+	}
+}
+
+.proposal__button_right
+{
+	top: 43%;
+	right: 28px;
+	padding: 16px;
+	padding: 16px;
+}
+
+.proposal__button_left
+{
+	top: 43%;
+	left: 27px;
+	padding: 16px;
+	padding: 16px;
+}
+
+.proposal .proposal__slider .proposal__button
+{
+	position: absolute;
+	border-radius: 5px;
+	padding: 14px 16px;
+	background-color: #fff;
+	border: none;
+	display: none;
+
+	@include mq($widescreen)
+	{
+		display: flex;
 	}
 }
 
@@ -49,10 +96,16 @@
 	object-fit: cover;
 }
 
+.proposal__book.container
+{
+	padding: 17px 20px;
+}
+
 // PROPOSAL__BOOK
 
 .proposal__book
 {
+	padding: 5px 27px;
 	padding: 20px;
 	max-width: 360px;
 	display: none;
@@ -80,6 +133,7 @@
 	@include mq($tablet)
 	{
 		display: none;
+		margin: 0 auto;
 	}
 }
 
@@ -91,7 +145,7 @@
 
 	@include mq($tablet)
 	{
-		margin-top: 10px;
+		// margin-top: 10px;
 	}
 
 	span:first-child
@@ -118,7 +172,7 @@
 {
 	display: flex;
 	justify-content: center;
-	margin: 20px 0 15px;
+	margin: 20px 0 13px;
 
 	img
 	{
@@ -137,7 +191,8 @@
 		}
 }
 
-.proposal__book-genre
+.proposal__book-genre,
+.g-book-genre
 {
 	color: #1C294D80;
 	font-size: 12px;
@@ -145,7 +200,8 @@
 	letter-spacing: .2px;
 }
 
-.proposal__book-description
+.proposal__book-description,
+.g-book-description
 {
 	margin-top: 5px;
 	font-size: 14px;
@@ -153,7 +209,8 @@
 	line-height: 19px;
 }
 
-.proposal__book-author
+.proposal__book-author,
+.g-book-author
 {
 	margin-top: 7px;
 	font-weight: 300;
@@ -161,19 +218,21 @@
 	font-size: 12px;
 }
 
-.proposal__book-price
+.proposal__book-price,
+.g-book-price
 {
 	margin-top: 3px;
 	font-weight: 600;
 	font-size: 18px;
 }
 
-.proposal__book-button
+.proposal__book-button,
+.g-book-button
 {
 	margin-top: 8px;
 	display: flex;
 	justify-content: space-between;
-
+	gap: 10px;
 
 	@include mq($tablet)
 	{
@@ -202,7 +261,6 @@
 		{
 		max-width:146px;
 		width: 100%;
-		margin-right: 10px;
 		}
 	}
 
@@ -219,7 +277,6 @@
 
 .proposal__description
 {
-	margin-top: 10px;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -228,8 +285,6 @@
 	@include mq($tablet)
 	{
 		justify-content: space-between;
-		margin-top: 30px;
-		
 	}
 }
 
@@ -256,7 +311,8 @@
 		svg
 		{
 			position: absolute;
-			left: -12px;
+			left: -9px;
+			top: -1px;
 			z-index: -1;
 		}
 	}
@@ -291,8 +347,8 @@
 		svg
 		{
 			position: absolute;
-			left: 22px;
-			bottom: -2px;
+			left: 19px;
+			bottom: -5px;
 			z-index: -1;
 		}
 	}
