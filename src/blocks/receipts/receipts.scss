@@ -157,9 +157,9 @@
 	span:nth-child(2)
 	{
 		background-color: #EEE9F7;
-		left: -10px;
+		left: -16px;
 		color: #AC8EE3;
-		top: -8px;
+		top: -2px;
 
 		@include mq($tablet)
 		{
@@ -172,8 +172,8 @@
 	{
 		background-color: #FFEEEE;
 		color: #FF4F52;
-		left: -10px;
-		top: 27px;
+		left: -16px;
+		top: 33px;
 
 		@include mq($tablet)
 		{

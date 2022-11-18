@@ -128,7 +128,7 @@
 	padding: 20px;
 	max-width: 360px;
 	display: block;
-	margin: 0 auto;
+	margin: 0 auto 10px;
 
 	@include mq($tablet)
 	{
