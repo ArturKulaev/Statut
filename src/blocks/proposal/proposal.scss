@@ -61,8 +61,13 @@
 	position: absolute;
 	left: 42%;
 	bottom: 28px;
-	display: flex;
+	display: none;
 	gap: 5px;
+
+	@include mq($widescreen)
+	{
+		display: flex;
+	}
 }
 
 .proposal__button-radio
