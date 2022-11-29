@@ -4,25 +4,64 @@ const 	sliderTrack = document.querySelector('._proposal__slider-track'),
 		dots = document.querySelectorAll('.proposal__dot');
 
 let 	position = 0,
-		itemWidth = document.querySelector('._proposal__slider-item').offsetWidth,
-		sliderTrackWidth = document.querySelectorAll('._proposal__slider-item').length * itemWidth - itemWidth;
-		dotIndex = 
+		dotIndex = 0,
+		itemWidth = document.querySelector('._proposal__slider-item').offsetWidth;
 
-btnNext.addEventListener('click', function () {
-	position = position - itemWidth;
-	if ( -position > sliderTrackWidth) {
-		position = 0;
-	};
-	sliderTrack.style.left = position + "px";
-});
+// FUNCTIONS
 
-btnPrev.addEventListener('click', function () {
-	position = position + itemWidth;
-	if (position > 0) {
-		position = -sliderTrackWidth
-	};
-	sliderTrack.style.left = position + "px";
-});
+const nextSlide = () =>
+{
+	if ( position < (dots.length - 1) * itemWidth)
+	{
+		position += itemWidth
+		dotIndex++
+	}
+	else
+	{
+		dotIndex = 0
+		position = 0
+	}
+	sliderTrack.style.left = -position + 'px'
+	thisSlide(dotIndex)
+};
 
+const prevSlide = () =>
+{
+	if ( position > 0 )
+	{
+		position -= itemWidth
+		dotIndex--
+	}
+	else
+	{
+		dotIndex = dots.length
+		position = (dots.length - 1) * itemWidth
+	}
+	sliderTrack.style.left = -position + 'px'
+	thisSlide(dotIndex)
+};
 
+const thisSlide = (index) =>
+{
+	for (let dot of dots)
+	{
+		dot.classList.remove('proposal__dot_active')
+	}
+	dots[index].classList.add('proposal__dot_active')
+}
 
+// EVENTLISTENERS
+
+btnNext.addEventListener( 'click', nextSlide );
+btnPrev.addEventListener( 'click', prevSlide );
+
+dots.forEach( ( dot, index) =>
+	{
+	dot.addEventListener('click', () =>
+	{
+		position = itemWidth * index
+		sliderTrack.style.left = -position + 'px';
+		dotIndex = index
+		thisSlide(dotIndex)
+	})
+})
