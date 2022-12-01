@@ -1,0 +1,169 @@
+.discounts
+{
+	background: rgba(40, 47, 54, 0.09);
+	position: relative;
+
+	hr{margin: 0;}
+
+	hr:first-child
+	{
+		width: 100%;
+		border: 1px solid #1C294D26;
+		position: absolute;
+		top: 80px;
+
+		@include mq($tablet)
+		{
+			display: none;
+		}
+	}
+
+	hr:nth-child(3)
+	{
+		width: 100%;
+		border: 1px solid #1C294D26;
+		position: absolute;
+		bottom: 1px;
+
+		@include mq($tablet)
+		{
+			display: none;
+		}
+	}
+
+	.container
+	{
+		@include mq($tablet)
+		{
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}
+
+.discounts__icon-list
+{
+	margin-bottom: 10px;
+	display: flex;
+	gap:15px;
+	justify-content: center;
+	// border: 1px solid #1C294D26;
+	align-items: center;
+
+	@include mq($tablet)
+		{margin-bottom: 0;}
+}
+
+.discounts__icon_mobile
+{
+	padding: 20px 0;
+	display: flex;
+	gap:15px;
+	justify-content: center;
+
+	@include mq($tablet)
+		{order: 1;}
+}
+
+.discounts__icon-link_mobile
+{
+	background: red;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+
+	@include mq($tablet)
+	{
+		display: none;
+	}
+
+	a
+	{
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.discounts__icon-link_desktop
+{
+	display: none;
+	@include mq($tablet)
+	{
+
+		display: block;
+	}
+}
+
+
+// DISCOUNTS__FORM
+
+.discounts__sale
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 13px;
+	// margin-right: 50px ;
+	padding-bottom: 13px;
+	@include mq($tablet)
+	{
+		padding-bottom: 8px;
+		margin-right: 50px ;
+		margin-top: 0;
+		max-width: 790px;
+		width: 100%;
+		justify-content: space-between;
+	}
+}
+
+.discounts__logo
+{
+	svg
+	{
+		width: 50px;
+		height: 40px;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.discounts__form
+{
+	display: flex;
+	height: 40px;
+	@include mq($tablet)
+	{
+		max-width: 443px;
+		width: 100%;
+	}
+}
+
+.discounts__form-input
+{
+	border: 1px solid #1C294D26;
+	// border: 5px 0 0 5px;
+	border-radius: 5px 0 0 5px;
+	width: 220px;
+	padding: 10px 0 10px 12px;
+	font-size: 14px;
+
+	@include mq($tablet)
+	{
+		width: 100%;
+	}
+}
+
+.discounts__form-button
+{
+	background-color: #FF5C00;
+	display: flex;
+	justify-content: center;
+	width: 55px;
+	border: none;
+	border-radius: 0 5px 5px 0;
+	align-items: center;
+	svg
+	{
+		vertical-align: middle;
+	}
+}

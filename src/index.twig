@@ -2,7 +2,10 @@
 
 {% block page %}
 	{% include "blocks/proposal/proposal.twig" %}
-	{% include "blocks/receipts/receipts.twig" %}
-	{% include "blocks/soon/soon.twig" %}
-	{% include "blocks/news/news.twig" %}
+	{% include "blocks/receipts/receipts.twig" with {'name':'Новые поступления'}%}
+	{% include "blocks/mail/mail.twig" %}
+	{% include "blocks/receipts/receipts.twig" with {'name':'Готовятся к выходу'}%}
+	{% include "blocks/boxes/boxes.twig" %}
+	{% include "blocks/news/news.twig" with {'name':'Новости'}%}
+	{% include "blocks/discounts/discounts.twig" %}
 {% endblock %}

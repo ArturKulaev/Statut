@@ -1,109 +1,91 @@
 <div class="proposal">
-	<div class="proposal__container 	">
-		<div class="left__block">
-				<div class="slider__container">	
-					<div class="slider__track">
-						<div class="slider-item">
-							<div class="center">
-								<p>2=3</p>
-								<p>на все книги</p>
-							</div>
-						</div>
-						<!-- <div class="slider-item"></div>
-						<div class="slider-item"></div>
-						<div class="slider-item"></div> -->
-					</div>
-				<div class="slider-buttons">
-					<button class="btn-prev btn"><p><i class="arrow btn-left"></i></p></button>
-					<button class="btn-next btn"><p><i class="arrow btn-right"></i></p></button>
+	<div class="proposal__container container">
+		<div class="proposal__wrapper">
+			<div class="proposal__slider-container _proposal__slider-container">
+				<div class="proposal__slider-track _proposal__slider-track">
+						<img src="img/slider.png" alt="#" class="proposal__slider-item _proposal__slider-item">
+						<img src="img/slider.png" alt="#" class="proposal__slider-item _proposal__slider-item">
+						<img src="img/slider.png" alt="#" class="proposal__slider-item _proposal__slider-item">
+						<img src="img/1.png" alt="#" class="proposal__slider-item _proposal__slider-item">
+				</div>
+				<button class="proposal__button proposal__button_left g-title-button">{% include "assets/svg/arrowSlideLeft.svg" %}</button>
+				<button class="proposal__button proposal__button_right g-title-button">{% include "assets/svg/arrowSlideRight.svg" %}</button>
+				<div class="proposal__dots">
+					<div class="proposal__dot _proposal__dot proposal__dot_active"></div>
+					<div class="proposal__dot _proposal__dot"></div>
+					<div class="proposal__dot _proposal__dot"></div>
+					<div class="proposal__dot _proposal__dot"></div>
 				</div>
 			</div>
-			<div class="book-mobile">
-			<div class="book__header">
-				<p class="book__title">Книга дня</p>
-				<span class="book_time">08:56:31</span>
-			</div>
-			<div class="book__picture">
+			<div class="proposal__book-mobile">
+				<div class="proposal__book-title">
+					<span>Книга дня</span>
+					<span>08:56:31</span>
+				</div>
+				<div class="proposal__book-img">
 					<img src="img/bookday.png" alt="">
-			</div>
-			<div class="book__description">
-				<p class="book__name">
-					Корпоративное право
-				</p>
-				<p class="description">
-					Инвестирование: способы, риски, субъекты : монография
-				</p>
-				<p class="book__author">
-					Майфат А.В.
-				</p>
-				<p class="book-price">
-					4 450 ₽ 
-				</p>
-				<div class="book-button">
-					<button class="button-buy">
-						{% include '/assets/svg/bagorange.svg' %}
-						В корзину
+				</div>
+				<div class="proposal__book-genre  g-book-genre">
+					<span>Корпоративное право</span>
+				</div>
+				<div class="proposal__book-description g-book-description">
+					<span>Инвестирование: способы, риски, субъекты : монография</span>
+				</div>
+				<div class="proposal__book-author g-book-author"><span>Майфат А.В.</span></div>
+				<div class="proposal__book-price g-book-price">4 450 ₽ </div>
+				<div class="proposal__book-button g-book-button">
+					<button>
+						{% include "assets/svg/bagorange.svg" %}
+						<span>В корзину</span>
 					</button>
-					<button class="button-bookmark">
-						{% include '/assets/svg/mark.svg' %}
+					<button>
+						{% include "assets/svg/mark.svg" %}
 					</button>
 				</div>
 			</div>
-		</div>
-			<div class="notifications__blocks">
-				<div class="notifications__block left">
-					<div class="notifications__block-img-left">
-						{% include '/assets/svg/curveleft.svg' %}
-					</div>
-					<p>	Бесплатно доставим <br>
-						ваш заказ при <br>
+			<div class="proposal__description">
+				<div class="proposal__description-worker">
+					<p>
+						<span>Бесплатно {% include "assets/svg/curveleft.svg" %}</span> доставим<br>
+						ваш заказ при<br>
 						покупке от 2000 ₽
 					</p>
-					{% include '/assets/svg/worker.svg' %}
+					{% include "assets/svg/worker.svg" %}
 				</div>
-				<div class="notifications__block right">
-					<div class="notifications__block-img-right">
-						{% include '/assets/svg/curveright.svg' %}
-					</div>
+				<div class="proposal__description-sale">
 					<p>
-						Скидка <br>
-						при регистрации <br>
-						до 15%
+						Скидка<br>
+						при регистрации<br>
+						до <span>15% {% include "assets/svg/curveright.svg" %}</span>
 					</p>
-					{% include '/assets/svg/manonsofa.svg' %}
+					{% include "assets/svg/manonsofa.svg" %}
 				</div>
 			</div>
 		</div>
-		<div class="book">
-			<div class="book__header">
-				<p class="book__title">Книга дня</p>
-				<span class="book_time">08:56:31</span>
+		<div class="proposal__book container">
+			<div class="proposal__book-title">
+				<span>Книга дня</span>
+				<span>08:56:31</span>
 			</div>
-			<div class="book__picture">
-					<img src="img/bookday.png" alt="">
+			<div class="proposal__book-img">
+				<img src="img/bookday.png" alt="">
 			</div>
-			<div class="book__description">
-				<p class="book__name">
-					Корпоративное право
-				</p>
-				<p class="description">
-					Инвестирование: способы, риски, субъекты : монография
-				</p>
-				<p class="book__author">
-					Майфат А.В.
-				</p>
-				<p class="book-price">
-					4 450 ₽ 
-				</p>
-				<div class="book-button">
-					<button class="button-buy">
-						{% include '/assets/svg/bagorange.svg' %}
-						В корзину
-					</button>
-					<button class="button-bookmark">
-						{% include '/assets/svg/mark.svg' %}
-					</button>
-				</div>
+			<div class="proposal__book-genre">
+				<span>Корпоративное право</span>
+			</div>
+			<div class="proposal__book-description">
+				<span>Инвестирование: способы, риски, субъекты : монография</span>
+			</div>
+			<div class="proposal__book-author"><span>Майфат А.В.</span></div>
+			<div class="proposal__book-price">4 450 ₽ </div>
+			<div class="proposal__book-button">
+				<button>
+					{% include "assets/svg/bagorange.svg" %}
+					<span>В корзину</span>
+				</button>
+				<button>
+					{% include "assets/svg/mark.svg" %}
+				</button>
 			</div>
 		</div>
 	</div>
