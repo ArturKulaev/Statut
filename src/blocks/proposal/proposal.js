@@ -2,7 +2,7 @@ const 	sliderTrack = document.querySelector('._proposal__slider-track'),
 		btnNext = document.querySelector('.proposal__button_right'),
 		btnPrev = document.querySelector('.proposal__button_left'),
 		dots = document.querySelectorAll('._proposal__dot');
-		images = document.querySelectorAll('._proposal__slider-track img')
+		images = document.querySelectorAll('._proposal__slider-track img');
 
 let 	position = 0,
 		dotIndex = 0,
@@ -10,12 +10,6 @@ let 	position = 0,
 		sliderTrackWidth = document.querySelector('._proposal__slider-track').offsetWidth;
 
 // FUNCTIONS
-
-function init()
-{
-	console.log('resize');
-	console.log(sliderTrackWidth);
-}
 
 const nextSlide = () =>
 {
@@ -42,7 +36,7 @@ const prevSlide = () =>
 	}
 	else
 	{
-		dotIndex = dots.length
+		dotIndex = dots.length - 1
 		position = (dots.length - 1) * itemWidth
 	}
 	sliderTrack.style.left = -position + 'px'
@@ -62,7 +56,6 @@ const thisSlide = (index) =>
 
 btnNext.addEventListener( 'click', nextSlide );
 btnPrev.addEventListener( 'click', prevSlide );
-init();
 
 dots.forEach( ( dot, index) =>
 	{

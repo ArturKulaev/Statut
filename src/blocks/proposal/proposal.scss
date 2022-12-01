@@ -78,11 +78,27 @@
 	padding: 14px 16px;
 	background-color: #fff;
 	border: none;
-	display: none;
+	display: flex;
+	width: 50%;
+	height: 100%;
+	opacity: 0;
+	top: 50%;
+	transform: translateY(-50%);
 
-	@include mq($widescreen)
+	@include mq($desktop)
 	{
+		opacity: 1;
 		display: flex;
+		width: auto;
+		height: auto;
+	}
+
+	@include mq($fullhd)
+	{
+		opacity: 1;
+		display: flex;
+		width: auto;
+		height: auto;
 	}
 }
 
@@ -107,15 +123,15 @@
 .proposal__dots
 {
 	position: absolute;
-	left: 42%;
-	bottom: 28px;
-	display: none;
+	left: 50%;
+	bottom: 6%;
+	display: flex;
 	gap: 5px;
-
+	transform: translatex(-50%);
 	@include mq($widescreen)
-	{
-		display: flex;
-	}
+		{
+			bottom: 6%;
+		}
 }
 
 .proposal__dot:hover
@@ -139,7 +155,7 @@
 
 .proposal__button_right
 {
-	top: 43%;
+
 	right: 28px;
 	padding: 16px;
 	padding: 16px;
@@ -147,7 +163,6 @@
 
 .proposal__button_left
 {
-	top: 43%;
 	left: 27px;
 	padding: 16px;
 	padding: 16px;
