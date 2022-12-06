@@ -9,6 +9,8 @@ let 	position = 0,
 		itemWidth = document.querySelector('._proposal__slider-item').offsetWidth,
 		sliderTrackWidth = document.querySelector('._proposal__slider-track').offsetWidth;
 
+console.log(sliderTrackWidth)
+
 // FUNCTIONS
 
 const nextSlide = () =>

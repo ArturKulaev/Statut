@@ -2,7 +2,61 @@
 	<div class="container">
 		<div class="header__top">
 			<ul class="header__top-list">
-				<li>{% include "assets/svg/mesto.svg" %}<a href="" class="header__top-link">Москва</a></li>
+				<li class="header__popup-opener" onclick="openPopup()">{% include "assets/svg/mesto.svg" %}<a class="header__top-link">Москва</a></li>
+
+				<div class="header__top-popup header__top-popup_open">
+					<button class="header__popup_close" onclick="closePopup()">
+						{% include '/assets/svg/krest.svg' %}
+					</button>
+					<div class="header__popup-title">
+						{% include '/assets/svg/mesto.svg' %}<h2>Ваш населённый пункт</h2>
+					</div>
+					<p class="header__popup-subtitle">
+						Поиск населенного пункта
+					</p>
+					<form class="header__popup-form" action="">
+						<input type="text"
+							class="header__popup-field"
+							placeholder="Откуда вы?" />
+						<button type="submit" class="header__popup-button">
+							{% include '/assets/svg/popuplupa.svg' %}
+						</button>
+					</form>
+					<div class="header__popup-links">
+						<ul>
+							<li>Москва</li>
+							<li>Санкт-Петербург</li>
+							<li>Новосибирск</li>
+							<li>Екатеринбург</li>
+							<li>Нижний Новгород</li>
+							<li>Казань</li>
+							<li>Челябинск</li>
+							<li>Омск</li>
+							<li>Самара</li>
+							<li>Ростов-на-Дону</li>
+							<li>Уфа</li>
+							<li>Саратов</li>
+							<li>Тверь</li>
+						</ul>
+
+						<ul>
+							<li>Краснодар</li>
+							<li>Красноярск</li>
+							<li>Архангельск</li>
+							<li>Мурманск</li>
+							<li>Владивосток</li>
+							<li>Самара</li>
+							<li>Сочи</li>
+							<li>Пермь</li>
+							<li>Тольятти</li>
+							<li>Ижевск</li>
+							<li>Тула</li>
+							<li>Тюмень</li>
+							<li>Хабаровск</li>
+						</ul>
+					</div>
+				</div>
+
 				<li>{% include "assets/svg/box.svg" %}<a href="" class="header__top-link">Доставка и оплата</a></li>
 				<li>{% include "assets/svg/adress.svg" %}<a href="" class="header__top-link">Адрес и часы работы</a></li>
 			</ul>
