@@ -112,7 +112,9 @@
 
 .proposal__slider-item
 {
-	
+	display: block;
+	flex-shrink: 0;
+	max-width: 750px;
 	// max-width: 750px;
 	width: 100%;
 	// min-height: 175px;
